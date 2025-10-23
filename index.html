@@ -213,6 +213,194 @@
 						</p>
 					</section>
 				</section>
+
+				<section style="text-align: left;">
+					<section>
+						<h2>Story 3: Zephyr RTOS – Board Support & Maintenance</h2>
+						<p><strong>Situation:</strong><br>
+						The Zephyr RTOS community needed reliable and well-maintained Board Support Packages (BSP) for Arm reference development boards such as Beetle and MPS2.</p>
+
+						<p><strong>Task:</strong><br>
+						Implement and maintain SoC and board enablement for these platforms within Zephyr
+						<br/>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://www.zephyrproject.org/wp-content/uploads/2023/03/Zephyr_color-10.svg" alt="Zephyr Project">
+						</p>
+					</section>
+					<section>
+						<h2>Story 3: Zephyr RTOS – Board Support & Maintenance</h2>
+						<p><strong>Action:</strong></p>
+						<ul>
+							<li>Authored patches to add SoC support and board configurations, e.g., Beetle SoC enablement (<a href="https://pigweed.googlesource.com/third_party/github/zephyrproject-rtos/zephyr/%2B/df33a1e1854018096aa5b55a8b327711b109f329%5E%21/">commit df33a1e</a>).</li>
+							<li>Maintained the Zephyr MAINTAINERS file entries for supported boards, ensuring ongoing support and responsiveness to community issues.</li>
+							<li>Tested and debugged on actual hardware platforms to ensure stable boot and peripheral functionality.</li>
+						</ul>
+						<br>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://www.zephyrproject.org/wp-content/uploads/2023/03/Zephyr_color-10.svg" alt="Zephyr Project">
+						</p>
+					</section>
+					<section>
+						<h2>Story 3: Zephyr RTOS – Board Support & Maintenance</h2>
+						<p><strong>Result:</strong><br>
+						Widespread adoption of Zephyr on Arm development boards with solid BSP support, strengthening the embedded ecosystem and demonstrating full-stack embedded expertise.</p>
+
+						<p><strong>References:</strong><br>
+						<ul>
+							<li>
+								<a href="https://pigweed.googlesource.com/third_party/github/zephyrproject-rtos/zephyr/%2B/df33a1e1854018096aa5b55a8b327711b109f329%5E%21/">Zephyr commit df33a1e1854</a><br>
+							</li>
+							<li>
+								<a href="https://github.com/zephyrproject-rtos/zephyr/blob/32310420808d3f1cfc6e73c74ab171b9d60220d2/CODEOWNERS#L79">Zephyr MAINTAINERS file</a>
+							</li>
+						</ul>
+						</p>
+						<br>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://www.zephyrproject.org/wp-content/uploads/2023/03/Zephyr_color-10.svg" alt="Zephyr Project">
+						</p>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section>
+						<h2>Story 4: Kernel Asynchronous MTE Mode Implementation</h2>
+						<p><strong>Situation:</strong><br>
+						Previously, MTE tag checks in the kernel were performed synchronously, which limited performance and fault handling flexibility.</p>
+
+						<p><strong>Task:</strong><br>
+						Implement asynchronous mode support for MTE tag checking in the AArch64 Linux kernel.</p>
+						<br/>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+						</p>
+					</section>
+					<section>
+						<h2>Story 4: Kernel Asynchronous MTE Mode Implementation</h2>
+						<p><strong>Action:</strong></p>
+						<ul>
+							<li>Authored the patch series that contains “<a href="https://lkml.iu.edu/2101.0/05072.html">[PATCH v2 2/4] arm64: mte: Add asynchronous mode support</a>”.</li>
+							<li>Integrated asynchronous exception handling with kernel memory sanitizer infrastructure (KASAN).</li>
+							<li>Ensured compatibility with existing kernel exception models and memory management systems.</li>
+							<li>Worked with maintainers through multiple review rounds and ensured upstream acceptance.</li>
+						</ul>
+						<br>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+						</p>
+					</section>
+					<section>
+						<h2>Story 4: Kernel Asynchronous MTE Mode Implementation</h2>
+						<p><strong>Result:</strong><br>
+						The Linux kernel supports asynchronous MTE tag checking, allowing delayed fault reporting which improves performance and memory error detection options.</p>
+
+						<p><strong>References:</strong><br>
+						<ul>
+							<li>
+								<a href="https://lkml.iu.edu/2101.0/05072.html">LKML patch series</a>
+							</li>
+						</ul>
+						</p>
+						<br>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+						</p>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section>
+						<h2>Story 5: Morello Capability Architecture Enablement</h2>
+						<p><strong>Situation:</strong><br>
+						The Arm Morello platform, implementing CHERI capability-based architecture, required upstream Linux kernel support and dedicated maintainership.</p>
+
+						<p><strong>Task:</strong><br>
+						Add device tree support and become the designated maintainer for the Morello platform in mainline Linux.</p>
+						<br/>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+						</p>
+					</section>
+					<section>
+						<h2>Story 5: Morello Capability Architecture Enablement</h2>
+						<p><strong>Action:</strong></p>
+						<ul>
+							<li>Authored device tree files supporting core Morello platform functionalities, e.g. “<a href="https://lists.infradead.org/pipermail/linux-arm-kernel/2025-February/1003247.html">[PATCH v6 07/10] arm64: dts: morello: Add support for common functionalities</a>”.</li>
+							<li>Added myself as maintainer for the Morello platform in the kernel MAINTAINERS file.</li>
+							<li>Submitted patches for device tree bindings (PMU Rainier) to support platform components.</li>
+							<li>Managed upstream review process and coordinated integration efforts.</li>
+						</ul>
+						<br>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+						</p>
+					</section>
+					<section>
+						<h2>Story 5: Morello Capability Architecture Enablement</h2>
+						<p><strong>Result:</strong><br>
+						Morello platform support is integrated into mainline Linux with clear maintainership, facilitating development on this next-generation secure architecture.</p>
+
+						<p><strong>References:</strong><br>
+						<ul>
+							<li>
+								<a href="https://lists.infradead.org/pipermail/linux-arm-kernel/2025-February/1003247.html">Morello DTS patch</a><br>
+							</li>
+							<li>
+								<a href="https://patchew.org/linux/20241213163221.3626261-9-vincenzo.frascino%40arm.com/">MAINTAINERS patch</a>
+							</li>
+						</ul>
+						</p>
+						<br>
+						<p style="text-align: center;">
+							<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+						</p>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Conclusions</h2>
+					<ul>
+						<li><strong>Kernel Documentation:</strong><br>
+							<ul>
+								<li>
+									<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/arm64/tagged-address.txt">Tagged Address ABI</a><br>
+								</li>
+								<li>
+									<a href="https://lwn.net/Articles/838211/">KASAN MTE</a>
+								</li>
+							</ul>
+						</li>
+
+						<li><strong>Selected Maintainer Listings:</strong>
+							<ul>
+								<li>vDSO: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/MAINTAINERS#n1231">MAINTAINERS</a></li>
+								<li>Morello: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/MAINTAINERS#n3001">MAINTAINERS</a></li>
+								<li>Xilinx Sound Drivers: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/MAINTAINERS#n28091">MAINTAINERS</a></li>
+								<li>KASAN: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/MAINTAINERS#n13406">REVIEWERS</a></li>
+								<li>Zephyr boards: <a href="https://github.com/zephyrproject-rtos/zephyr/blob/32310420808d3f1cfc6e73c74ab171b9d60220d2/CODEOWNERS#L79">Zephyr MAINTAINERS</a></li>
+							</ul>
+						</li>
+
+						<li><strong>Acknowledgments:</strong><br>
+						Reviewed-by and Acked-by tags from multiple kernel maintainers including Thomas Gleixner, Catalin Marinas, Arnd Bergmann, Mark Rutland, Andrey Konovalov, etc.
+						</li>
+					</ul>
+					<br/>
+					<p style="text-align: center;">
+						<img height="150" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" alt="Linux Kernel">
+					</p>
+				</section>
+
+				<section style="text-align: right;">
+					<h2>
+						Thank you for your attention
+					</h2>
+					<p>
+						Vincenzo Frascino <br>
+						<a href="mailto: vincenzo@kernel.org"><b>vincenzo@kernel.org</b></a>
+					</p>
+				</section>
+
 			</div>
 		</div>
 
