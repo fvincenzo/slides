@@ -25,6 +25,7 @@ jobs:
       - run: cp index.html public
       - run: cp -Rf plugin public
       - run: cp -Rf dist public
+      - run: cp -Rf content public
       - uses: actions/upload-pages-artifact@v3
         with: { path: public }
   deploy:
